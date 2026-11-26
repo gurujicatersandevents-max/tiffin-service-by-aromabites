@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FFF9EB;
+  color: #402000;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Jagged Perforated Ticket Edges */
+.ticket-edge-top {
+  mask-image: radial-gradient(circle 8px at 12px 0, transparent 0, transparent 8px, black 9px);
+  mask-size: 24px 100%;
+}
+
+/* Candy-stripe animated progress bar */
+@keyframes candyStripe {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
+
+.candy-stripe-progress {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #F5A623 0,
+    #F5A623 12px,
+    #F5B318 12px,
+    #F5B318 24px
+  );
+  background-size: 40px 40px;
+  animation: candyStripe 0.8s linear infinite;
+}
+
+.ticket-edge-bottom {
+  mask-image: radial-gradient(circle 8px at 12px 100%, transparent 0, transparent 8px, black 9px);
+  mask-size: 24px 100%;
+}
+
+/* Starburst background decoration */
+.sunburst-bg {
+  background: radial-gradient(circle, rgba(245, 179, 24, 0.28) 0%, rgba(46, 27, 10, 0) 70%);
+}
+
+/* Hide scrollbar for category tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
